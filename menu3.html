@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menustyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <title>Videos and Reference</title>
+    <style>
+        .menu-item {
+            cursor: default; /* Default cursor for non-interactive elements */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-item p {
+    margin-bottom: 15px; /* Adds space below the paragraph */
+}
+
+        .thumbnail {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer; /* Change cursor only on thumbnail */
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        /* Like & View Section */
+        .video-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .video-info i {
+            cursor: pointer; /* Change cursor only on like icon */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .like-icon {
+            color: red;
+            cursor: pointer; /* This will change the cursor to a hand on hover */
+        }
+
+        .view-icon {
+            color: #555;
+        }
+
+        /* Animation when icon is clicked */
+        .clicked {
+            animation: scaleUp 0.3s ease-out forwards;
+        }
+
+        /* Define the scaling animation */
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Popup Modal Styles */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .video-container video {
+            width: 100%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Video Tutorials</h1>
+        </header>
+        <div class="content">
+            <div class="menu">
+                <div class="menu-item" data-video="videos/video1.mp4" data-id="video1">
+                    <h2 class="video-title">Basic Sewing Tools</h2>
+                    <p style="margin-bottom: 15px;">Learn about essential tools for every sewing project.</p>
+                    <img src="thumbnails/v1.png" alt="Basic Sewing Tools" class="thumbnail" onclick="openVideoModal(this)">
+                    <div class="video-info">
+                        <i class="fa-solid fa-eye view-icon" onclick="animateIcon(this, 'video1')"></i> <span id="views-video1">0</span>
+                        <i class="fa-solid fa-heart like-icon" onclick="likeVideo('video1', this)"></i> <span id="likes-video1">0</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-video="videos/video2.mp4" data-id="video2">
+                    <h2 class="video-title"></h2>
+                    <h2 class="video-title">Basic Body Measurements</h2>
+                    <p style="margin-bottom: 15px;">Learn how to take accurate body measurements for perfect fitting.</p>
+                    <img src="thumbnails/v2.png" alt="Taking Body Measurements" class="thumbnail" onclick="openVideoModal(this)">
+                    <div class="video-info">
+                        <i class="fa-solid fa-eye view-icon" onclick="animateIcon(this, 'video2')"></i> <span id="views-video2">0</span>
+                        <i class="fa-solid fa-heart like-icon" onclick="likeVideo('video2', this)"></i> <span id="likes-video2">0</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-video="videos/video3.mp4" data-id="video3">
+                    <h2 class="video-title">Tracing Pattern</h2>
+                    <p style="margin-bottom: 15px;">Learn about pattern placing and tracing.</p>
+                    <img src="thumbnails/v3.png" alt="Tracing Pattern" class="thumbnail" onclick="openVideoModal(this)">
+                    <div class="video-info">
+                        <i class="fa-solid fa-eye view-icon" onclick="animateIcon(this, 'video3')"></i> <span id="views-video3">0</span>
+                        <i class="fa-solid fa-heart like-icon" onclick="likeVideo('video3', this)"></i> <span id="likes-video3">0</span>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Copyright © 2024. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Video Popup Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-container">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <video id="popupVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Load likes & views from Local Storage
+        function loadCounts() {
+            document.querySelectorAll('.menu-item').forEach(item => {
+                const videoId = item.getAttribute('data-id');
+                document.getElementById(`views-${videoId}`).innerText = localStorage.getItem(`views-${videoId}`) || 0;
+                document.getElementById(`likes-${videoId}`).innerText = localStorage.getItem(`likes-${videoId}`) || 0;
+            });
+        }
+
+        // Function to open modal, play video & update views
+        function openVideoModal(thumbnail) {
+            const videoSrc = thumbnail.parentElement.getAttribute('data-video');
+            const videoId = thumbnail.parentElement.getAttribute('data-id');
+            const videoPlayer = document.getElementById('popupVideo');
+            
+            videoPlayer.src = videoSrc;
+            document.getElementById('videoModal').style.display = 'flex';
+            videoPlayer.play();
+
+            // Update views
+            let views = parseInt(localStorage.getItem(`views-${videoId}`)) || 0;
+            views++;
+            localStorage.setItem(`views-${videoId}`, views);
+            document.getElementById(`views-${videoId}`).innerText = views;
+        }
+
+        // Function to close modal and stop video
+        function closeModal() {
+            const videoPlayer = document.getElementById('popupVideo');
+            videoPlayer.pause();
+            videoPlayer.src = ""; // Clear source to stop downloading video
+            document.getElementById('videoModal').style.display = 'none';
+        }
+
+        // Function to like video
+        function likeVideo(videoId, icon) {
+            let likes = parseInt(localStorage.getItem(`likes-${videoId}`)) || 0;
+            likes++;
+            localStorage.setItem(`likes-${videoId}`, likes);
+            document.getElementById(`likes-${videoId}`).innerText = likes;
+            animateIcon(icon, videoId); // Add animation effect
+        }
+
+        // Function to animate clicked icon (scale effect)
+        function animateIcon(icon, videoId) {
+            icon.classList.add('clicked');
+            setTimeout(() => {
+                icon.classList.remove('clicked');
+            }, 300); // Animation duration
+        }
+
+        // Load counts when page loads
+        window.onload = loadCounts;
+    </script>
+</body>
+</html>

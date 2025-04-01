@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 dart blouse</title>
+    <link rel="stylesheet" href="pricutstyle.css".css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- 6 containers -->
+        <div class="center-container">
+            <p>Enter the measurements in the box to automatically calculate and draw the pattern for your Blouse</p>
+        </div>
+        <div class="center-container">
+            <form id="textForm">
+                <div class="tooltip">
+                    <input name="backlen" id="bl" type="number" placeholder="BACK length of blouse" aria-required="false" autocomplete="off" step="0.1" aria-label="BACK length of blouse">
+                    <span class="tooltiptext">Measure from the nape of the neck to the bottom of the blouse. </span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="waist" id="wr" type="number" placeholder="Waist Round" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure around the narrowest part of your waist. This measurement is critical for fitting the waist of the garment.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="shoulder" id="shold" type="number" placeholder="Full Shoulder Width" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure from one shoulder end to the other across the back. Ensure that the tape is straight for an accurate measurement.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="chestr" id="cr" type="number" placeholder="Chest Round" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure around the fullest part of your chest. Keep the tape measure level and snug, but not tight.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="bustr" id="br" type="number" placeholder="Bust Round" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure around the fullest part of your bust. This helps in ensuring the garment fits comfortably around the bust area.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="s2apex" id="s2a" type="number" placeholder="Shoulder to Apex length" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure from the top of the shoulder to the apex (the fullest part of the bust). This helps in positioning the darts correctly.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="a2apex" id="a2a" type="number" placeholder="Apex to Apex distance" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure the distance between the two apex points of your bust. This ensures proper alignment of the garment’s design.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="bneck" id="bn" type="number" placeholder="Back Neck Depth" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure from the nape of the neck to the desired back neckline depth. This measurement affects the comfort and fit of the garment.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="fneck" id="fn" type="number" placeholder="Front Neck Depth" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure from the top of the shoulder to the desired front neckline depth. This measurement is essential for a comfortable and aesthetically pleasing neckline.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="armhole" id="armr" type="number" placeholder="Armhole Circumference" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure around the armhole at the shoulder joint. Ensure the tape measure is snug for accurate sleeve fitting.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="sleever" id="sr" type="number" placeholder="Sleeve Round" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure around the arm where the sleeve will end. This ensures the sleeve fits comfortably around the arm.</span>
+                </div>
+                <div><br/></div>
+            
+                <div class="tooltip">
+                    <input name="sleevelen" id="sl" type="number" placeholder="Sleeve Length" aria-required="false" autocomplete="off" step="0.1">
+                    <span class="tooltiptext">Measure from the shoulder seam to where the sleeve should end. This determines the length of the sleeve for your garment.</span>
+                </div>
+                <div><br/></div>
+            
+                <button class="custom-button" type="submit">CALCULATE</button>
+                <div><br/></div>
+            </form>
+    
+        </div>
+        <div class="center-container">
+            <svg id="svg1" width="350" height="350" preserveAspectRatio="xMidYMid meet" data-bbox="0.5 0.5 1301.5 1442" viewBox="0 0 1202.5 1443" xmlns="http://www.w3.org/2000/svg" data-type="ugc" role="presentation" aria-hidden="true" aria-label="">
+                <g>
+                    <g>
+                       <!--outer rect--> <path stroke-miterlimit="10" fill="honeydew" stroke-width="25" stroke="#7a7a7a" d="M1302 .5v1442H.5V.5H1302z"></path>
+                       <!--inner rect--> <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M1093 196.5v1054H326v-1054h767z"></path>
+                       <!--white region--><path d="M 326.5 725 s 178.5-80.6 178-208 c-.5-125.5 .5-321.5 .5-321.5 L745.5 200 v150 S761 567.5 989 566.5 c78 1 104 0 104 0 l -51 590 41 95-754-1z" fill="#ffffff" stroke-width="5" stroke="#000000" stroke-miterlimit="10"></path>
+                       <!--chest line--> <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M331.5 566.5H1093"></path>
+                       <!--chest to waist stich line--> <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M957 1251.5l-23-94 55-591"></path>
+                       <!--waist stich line--> <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M330.5 1156.5h712"></path>
+                       <!--neck shaper L--><path stroke="#000000" fill="none" stroke-miterlimit="10" d="M327.5 725.5l176.5-3 1-526.5"></path>
+                       <!--armhole perpendular L--><path stroke="#000000" fill="none" stroke-miterlimit="10" d="M820 496.5L745.5 567"></path>
+                       <!--neck perpendicular--> <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M436 651.5l68 72"></path>
+                      <!--armhole depth--> <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M746 195.5V567h345.2"></path>
+                       <!--shoulder stich line--> <path stroke="#000000" stroke-width="3" fill="none" stroke-miterlimit="10" d="M748 252 L503 249"></path>
+                       <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M59 0v1" stroke-width="3"></path>
+                       <!--blouse length--> <path stroke-dasharray="10.05 10.05" stroke="#ff0000" fill="none" stroke-width="3" stroke-miterlimit="10" d="M90 250 v 905.5"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 1149.5v5"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M331.5 1156.5h-3"></path>
+                       <!--waist stich line red doted--> <path stroke-dasharray="5.93 5.93"  stroke-width="3" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M322.6 1156.5H81"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M38 1156.5h-3"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M523.5 1177.5h-3"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M333.5 1177.5h-3"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M1051 1177.5h-3"></path>
+                        <path stroke-dasharray="6.21 6.21" stroke="#ff0000" fill="none" stroke-miterlimit="10" stroke-width="3" d="M1041.8 1177.5h-96.2"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M942.5 1177.5h-3"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M746 153.5h-3"></path>
+                        <!--half shoulder red line--> <path stroke-dasharray="6.01 6.01" stroke="#ff0000" stroke-width="3" fill="none" stroke-miterlimit="10" d="M737 153.5H331.5"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M328.5 153.5h-3"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M504 223.5h-3"></path>
+                        <!--neck width red line--> <path stroke-dasharray="5.95 5.95" stroke-width="3" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M515.1 249 H 89"></path>
+                        <!--waist cut line red doted<path stroke-dasharray="5.93 5.93" stroke-width="3" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M322.6 1250.5H5"></path>
+                        --> <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M38 1250.5h-3"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M157 198v5"></path>
+                        <!--back neck depth stand red line--> <path stroke-dasharray="10.02 10.02" stroke="#ff0000" stroke-width="3" fill="none" stroke-miterlimit="10" d="M190 250v480"></path>
+                       <!-- neck depth sleep red line--> <path stroke-dasharray="10.02 10.02" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M190.5 726.5h132"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M157 714v5"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M325.5 1316.5h5"></path>
+                        <!--waist line red--> <path stroke-dasharray="9.94 9.94" stroke="#ff0000" stroke-width="3" fill="none" stroke-miterlimit="10" d="M340.4 1316.5H952"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M957 1316.5h5"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M758 197v3"></path>
+                        <!--soulder seam-->  <path stroke-dasharray="5.3 5.3" stroke="#ff0000" stroke-width="3" fill="none" stroke-miterlimit="10" d="M758 205.3v50.6"></path>
+                        <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M758 226.5v3"></path>
+                        <text transform="rotate(-90 375.2 195.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="33">
+                            BACK NECK DEPTH
+                        </text>
+                        <text transform="rotate(-90 641.2 -89.2)" font-family="ArialMT,Arial" fill="#ff0000" font-size="32">
+                            ARMHOLE DEPTH
+                        </text>
+                        <text transform="translate(967.6 1222.8)" font-size="34" font-family="ArialMT,Arial" fill="#ff0000">
+                            1.5 in
+                        </text>
+                        <text transform="translate(350.6 1222.8)" font-size="34" font-family="ArialMT,Arial" fill="#ff0000">
+                            1.5 in
+                        </text>
+                        
+                        <text transform="rotate(-85.6 1109.703 17.62)" font-family="ArialMT,Arial" fill="#ff0000" font-size="36">
+                            SEAM<tspan y="0" x="102" letter-spacing="-.06em"> </tspan><tspan y="0" x="110">ALLO</tspan><tspan y="0" x="202.1" letter-spacing="-.04em">W</tspan><tspan y="0" x="234.7">ANCE</tspan>
+                        </text>
+                        <text transform="rotate(45 -227.762 1156.558)" font-size="30" font-family="ArialMT,Arial" fill="#ff0000">
+                            <tspan>1.5 in</tspan>
+                        </text>
+                        <text transform="rotate(-90 347.2 270.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="36">
+                            LENGTH OF BLOUSE
+                        </text>
+                        <text transform="translate(326.9 1361.3)" font-family="ArialMT,Arial" fill="#ff0000" font-size="36">
+                            <tspan letter-spacing="-.04em">W</tspan><tspan y="0" x="32.6">AIS</tspan><tspan y="0" x="90.7" letter-spacing="-.02em">T</tspan><tspan y="0" x="112"> LINE</tspan>
+                        </text>             
+                        <text id="b1" transform="rotate(-90 430.2 350.8)" font-family="ArialMT,Arial" fill="" font-size="36">
+                            0.00
+                        </text>
+                        <text transform="translate(1089.1 91)" font-size="62.84" font-family="ArialMT,Arial">
+                            BACK
+                        </text>
+                        <text transform="translate(768.4 233.7)" font-size="30" font-family="ArialMT,Arial" fill="#ff0000">
+                            0.50 in
+                        </text>
+                        <text id="b2" transform="rotate(-90 450.4 270.8)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                            00.00
+                        </text>
+                        <text id="b3" transform="translate(500.1 140)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                            00.00 
+                        </text>
+                        <text id="b4" transform="translate(350.1 300)" font-family="ArialMT,Arial" fill=#000000"" font-size="36">
+                            00.00
+                        </text>
+                        <text id="b5" transform="translate(830.1 630)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                            00.00
+                        </text>
+                        <text id="b6" transform="translate(580 1360)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                            00.00
+                        </text>
+                        <text id="b7" transform="rotate(-90 600.2 -200.2)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                            00.00
+                        </text>
+                        
+                    </g>
+                </g>
+            </svg>
+            </div>
+           
+        <div class="center-container">
+            
+            <svg id="svg2" width="350" height="350" preserveAspectRatio="xMidYMid meet" data-bbox="0.5 0.5 1305.5 1442" viewBox="0 0 1306.5 1443" xmlns="http://www.w3.org/2000/svg" data-type="ugc" role="presentation" aria-hidden="true">
+                <g>
+                    <path stroke-miterlimit="10" fill=honeydew stroke="#7a7a7a"stroke-width="25" d="M1306 .5v1442H.5V.5H1306z"></path>
+                    <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M746 567h345.23"></path>
+                    <!--inner rect--><path stroke="#000000" fill="none" stroke-miterlimit="10" d="M1196 196.5v1057H326v-1057h870z"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M758 197v3"></path>
+                    <path stroke-dasharray="5.3 5.3" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M758 205.3v18.55"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M758 226.5v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 198v3"></path>
+                    <!--blouse length--><path stroke-dasharray="6.01 6.01" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 227.01V1057"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 1060v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M746 153.5h-3"></path>
+                       <!-- half shoulder--><path stroke-dasharray="6.01 6.01" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M736.99 153.5H331.5"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M328.5 153.5 h-3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M504 223.5h-3"></path>
+                    <path stroke-dasharray="5.95 5.95" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M495.05 223.5H331.47"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M328.5 223.5h-3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M589 199v3"></path>
+                    <!--neck width red line--> <path stroke-dasharray="5.95 5.95" stroke-width="3" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M325.1 225 H 89"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M589 887v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M241 198v3"></path>
+                    <!--front neck depth red line--><path stroke-dasharray="5.97 5.97" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M241 226.97v451.04"></path>
+                    <!-- neck depth sleep red line--> <path stroke-dasharray="10.02 10.02" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M250.5 680.5 h112"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M241 661v3"></path>
+                    <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M746 195.5V569"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M495.5 1062.5h-3"></path>
+                    <path stroke-dasharray="6.07 6.07" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M486.43 1062.5H331.54"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M328.5 1062.5h-3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M681.5 1062.5h-3"></path>
+                    <path stroke-dasharray="6.07 6.07" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M672.43 1062.5h-166.9"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M502.5 1062.5h-3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M326 1078.5v3"></path>
+                    <path stroke-dasharray="5.07 5.07" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M326 1086.57v27.89"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M326 1117v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M495 1045.5v3"></path>
+                    <path stroke-dasharray="5.07 5.07" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M495 1053.57v27.89"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M495 1084v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M349.75 677.25h-3"></path>
+                    <path stroke-dasharray="5.92 5.92" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M340.83 677.25h-8.87"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M329 677.25h-3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M682 1045.5v3"></path>
+                    <path stroke-dasharray="5.07 5.07" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M682 1053.57v27.89"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M682 1084v3"></path>
+                    <path d="M347 677.5s141-26 158.5-157.5c.5-113.5.5-323.5.5-323.5L745.5 200l-15 225c0 111 44 153 361 144 3 28 105 687 105 687-201-1-66 0-870-3 0-262 20.5-573.5 20.5-573.5z" fill="#ffffff" stroke-width="2" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M328.5 567.5l661.5 2 102-2 104 686"></path>
+                    <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M1105 1253.5l-115-682"></path>
+                    <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M347.5 677.5H505l1-478.5"></path>
+                    <path stroke="#000000" fill="none" stroke-miterlimit="10" d="M453 622.5l51.93 55.07"></path>
+                    <path d="M652.5 1252.41l28-97.91s-97-197.25-91.5-259c11-123 188.76-346 203.38-354" stroke="#000000" fill="none" stroke-miterlimit="10"></path>
+                    <path d="M523.5 1252.41l-28-97.91s93.5-178 93.5-259 54-221 158-396" stroke="#000000" fill="none" stroke-miterlimit="10"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 1064v3"></path>
+                    <path stroke-dasharray="5.85 5.85" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 1072.85v172.72"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M89 1248.5v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M331.5 1250.5h-3"></path>
+                    <path stroke-dasharray="5.93 5.93" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M322.57 1250.5H40.96"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M38 1250.5h-3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M589 198v3"></path>
+                    <path stroke-dasharray="5.97 5.97" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M589 206.97v678.04"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M589 888v3"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M1091 1156.5h-3"></path>
+                    <path stroke-dasharray="6 6" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M1082 1156.5H41"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M38 1156.5h-3"></path>
+                    <text transform="rotate(-90 405.2 175.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="33">
+                        FRONT NECK DEPTH
+                    </text>
+                    <text id="f11" transform="rotate(-90 621.2 -89.2)" font-family="ArialMT,Arial" fill="#ff0000" font-size="32">
+                        ARMHOLE DEPTH
+                    </text>
+                    <text transform="translate(800.6 1202.8)" font-size="34" font-family="ArialMT,Arial" fill="#00000">
+                        00.00
+                    </text>
+                    <text transform="translate(350.6 1202.8)" font-size="34" font-family="ArialMT,Arial" fill="#000000">
+                        00.00
+                    </text>
+                    
+                    <text transform="rotate(-100.6 1009.703 58.62)" font-family="ArialMT,Arial" fill="#ff0000" font-size="36">
+                        SEAM<tspan y="0" x="102" letter-spacing="-.06em"> </tspan><tspan y="0" x="110">ALLO</tspan><tspan y="0" x="202.1" letter-spacing="-.04em">W</tspan><tspan y="0" x="234.7">ANCE</tspan>
+                    </text>
+                    <text transform="rotate(-90 347.2 270.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="36">
+                        LENGTH OF BLOUSE
+                    </text>
+                    <text transform="translate(326.9 1381.3)" font-family="ArialMT,Arial" fill="#ff0000" font-size="36">
+                        <tspan letter-spacing="-.04em">W</tspan><tspan y="0" x="32.6">AIS</tspan><tspan y="0" x="90.7" letter-spacing="-.02em">T</tspan><tspan y="0" x="112"> LINE</tspan>
+                    </text>             
+                    <text id="b1" transform="rotate(-90 430.2 350.8)" font-family="ArialMT,Arial" fill="" font-size="36">
+                        00.00
+                    </text>
+                    <text transform="translate(1039.1 91)" font-size="62.84" font-family="ArialMT,Arial">
+                        FRONT
+                    </text>
+                    <text transform="translate(768.4 233.7)" font-size="30" font-family="ArialMT,Arial" fill="#ff0000">
+                        0.50 in
+                    </text>
+                    <text id="b2" transform="rotate(-90 470.4 250.8)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                        00.00
+                    </text>
+                    <text id="b3" transform="translate(500.1 140)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                        00.00
+                    </text>
+                    <text id="b4" transform="translate(350.1 300)" font-family="ArialMT,Arial" fill=#000000"" font-size="36">
+                        00.00
+                    </text>
+                    <text id="b5" transform="translate(830.1 630)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                        00.00
+                    </text>
+                    <text id="b6" transform="translate(545 1300)" font-family="ArialMT,Arial" fill="#000000" font-size="34">
+                        00.00
+                    </text>
+                    <text id="b9" transform="translate(545 1202.8)" font-family="ArialMT,Arial" fill="#000000" font-size="34">
+                        00.00
+                    </text>
+                    <text id="b7" transform="translate(800 1300)" font-family="ArialMT,Arial" fill="#000000" font-size="34">
+                        00.00
+                    </text>
+                    <text id="b8" transform="translate(350 1300)" font-family="ArialMT,Arial" fill="#000000" font-size="34">
+                        00.00
+                    </text>
+                    <text id="b10" transform="translate(1100 1300)" font-family="ArialMT,Arial" fill="#ff0000" font-size="34">
+                        1 inch
+                    </text>
+                    <text id="b11" transform="rotate(-90 600.2 -200.2)" font-family="ArialMT,Arial" fill="#000000" font-size="36">
+                        00.00
+                    </text>
+                    <text id="b1" transform="rotate(-90 699.2 547.8)" font-family="ArialMT,Arial" fill="#000000" font-size="35">
+                        00.00
+                    </text>
+                </g>
+            </svg>
+            
+        </div>
+        <div class="center-container">
+            <svg id="svg3" width="350" height="350" preserveAspectRatio="xMidYMid meet" data-bbox="0.5 0.5 1305.5 1049" viewBox="0 0 1306.5 1050" xmlns="http://www.w3.org/2000/svg" data-type="ugc" role="presentation" aria-hidden="true" aria-label="">
+                <g>
+                    <path stroke-miterlimit="10" stroke="#7a7a7a" fill="honeydew"  stroke-width="25" d="M1306 .5v1049H.5V.5H1306z"></path>
+                    <path stroke-width="2" stroke="#000000" fill="#ffffff" stroke-miterlimit="10" d="M987.5 432.3L937 878H449V190.4"></path>
+                    <path d="M450 200.4C557 142 795 268 920.4 430.7H499.5s.5-197.7.5-244.z" fill="#d8d8d8" stroke-width="2" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M341.5 180v5"></path>
+                    <path stroke-dasharray="9.96 9.96" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M341.5 195v672.5"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M341.5 872.5v5"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M412.5 188v5"></path>
+                    <path stroke-dasharray="10.28 10.28" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M412.5 203.3v221.1"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M412.5 429.5v5"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M449 956.5h5"></path>
+                    <path stroke-dasharray="9.78 9.78" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M463.8 956.5h405.8"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M874.5 956.5h5"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M879.5 956.5h5"></path>
+                    <path stroke-dasharray="8.8 8.8" stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M893.3 956.5h30.8"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M928.5 956.5h5"></path>
+                    <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M880.5 878.5l47-448.3"></path>
+                    <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M450 878.5h430"></path>
+                    <path d="M450 190.4C746.6 145.2 692 445 990.4 434.7H449.5z" stroke-width="2" stroke="#000000" fill="#ffffff" stroke-miterlimit="10"></path>
+                    <path d="m-25.918-120.945 583.272-27.034" fill="none" stroke="#ff0000" stroke-width="1.04" stroke-dasharray="10.41,10.41" transform="matrix(.83825 .37656 .40977 -.91219 524.81 94.368)"></path>
+                    <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M937.5 878.5L985 430.2"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M879.5 939v27"></path>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M937.5 939v27"></path>
+                    <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M859.5 305.5L840 335"></path>
+                    <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M575.5 175.5L556 205"></path>
+                    <text transform="translate(879.5 1004.2)" font-family="ArialMT,Arial" fill="#ff0000" font-size="30">
+                        1 in
+                    </text>
+                    <text transform="translate(928.5 470.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="30">
+                        1 in
+                    </text>
+                    <text transform="rotate(-83.3 937.486 -90.208)" font-size="36" font-family="ArialMT,Arial" fill="#ff0000">
+                        SEAM<tspan y="0" x="102" letter-spacing="-.06em"> </tspan><tspan y="0" x="110">ALLO</tspan><tspan y="0" x="202.1" letter-spacing="-.04em">W</tspan><tspan y="0" x="234.7">ANCE</tspan>
+                    </text>
+                    <text transform="rotate(-90 635.75 150.85)" fill="#666666" font-family="ArialMT,Arial" font-size="30">
+                        <tspan>ON FOLD</tspan>
+                    </text>
+                    <path stroke="#ff0000" fill="none" stroke-miterlimit="10" d="M730 301v31.5"></path>
+                    <text transform="rotate(-90 401.45 74.55)" font-size="36" font-family="ArialMT,Arial" fill="#ff0000">
+                        SLEEVE LENGTH
+                    </text>
+                    <text transform="rotate(-90 401.65 1.75)" font-size="36" font-family="ArialMT,Arial" fill="#ff0000">
+                        SLEEVE CAP
+                    </text>
+                    <text transform="translate(448.6 1004.4)" font-size="31.06" font-family="ArialMT,Arial" fill="#ff0000">
+                        SLEEVE BOTTOM LINE
+                    </text>
+                    <text transform="translate(461.1 482)" font-size="31.06" font-family="ArialMT,Arial" fill="#ff0000">
+                        SLEEVE TOP LINE
+                    </text>
+                    <text transform="translate(536.1 165.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="30">
+                        FRONT
+                    </text>
+                    <text transform="translate(822.2 295.8)" font-family="ArialMT,Arial" fill="#ff0000" font-size="30">
+                        BACK
+                    </text>
+                    <text transform="translate(1003.6 87)" font-size="62.84" font-family="ArialMT,Arial">
+                        SLEEVE
+                    </text>
+                    <text id="s1" transform="rotate(-90 500 180.5)" font-family="ArialMT,Arial" fill="#000000" font-size="35">
+                        00.00
+                   </text>
+                   <text id="s2" transform="rotate(-90 460 -40.5)" font-family="ArialMT,Arial" fill="#000000" font-size="35">
+                        00.00
+                   </text>
+                   <text id="s3" transform="translate(750 480.5)" font-family="ArialMT,Arial" fill="#000000" font-size="35">
+                        00.00
+                   </text>
+                   <text id="s4" transform="translate(450 930.5)" font-family="ArialMT,Arial" fill="#000000" font-size="35">
+                        00.00
+                   </text>
+                </g>
+            </svg>          
+        </div>
+        <div>
+            <!-- Button to download as ZIP -->
+            <button class="custom-button"  id="downloadBtn">Click to Download Pattern</button>
+          <!-- Link to the JavaScript file --><!-- Link to the JavaScript file -->
+           <script src="pricutdownpdf.js"></script>
+         </div>
+    </div>
+    <script src="pricutscript.js"></script>
+</body>
+</html>

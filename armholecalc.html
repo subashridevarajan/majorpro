@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armhole Calculator</title>
+    <link rel="stylesheet" href="armholecalcstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1><center>Armhole Calculator</center></h1>
+        <div class="form-group">
+            <label for="armholeCircumference">Armhole Circumference (inches):</label>
+            <input type="number" id="armholeCircumference" required>
+        </div>
+        <div class="form-group">
+            <label for="backNeckDepth">Back Neck Depth (inches):</label>
+            <input type="number" id="backNeckDepth" required>
+        </div>
+        <button onclick="calculateArmhole()">Calculate</button>
+
+        <div id="result" style="display: none;">
+            The Adjusted Armhole is: <span class="armhole" id="armholeValue"></span>
+        </div>
+    </div>
+
+    <script>
+        function calculateArmhole() {
+            // Get the input values
+            const armholeCircumference = parseFloat(document.getElementById("armholeCircumference").value);
+            const backNeckDepth = parseFloat(document.getElementById("backNeckDepth").value);
+
+            // Validate inputs
+            if (isNaN(armholeCircumference) || isNaN(backNeckDepth)) {
+                alert("Please enter valid numeric values.");
+                return;
+            }
+
+            // Step 1: Calculate initial armhole
+            let newArmhole = (armholeCircumference - 2) / 2;
+
+            // Step 2: Adjust based on back neck depth
+            // If back neck depth is greater than 7, use 7 for the adjustment
+            const effectiveBackNeckDepth = backNeckDepth > 7 ? 7 : backNeckDepth;
+
+            if (effectiveBackNeckDepth > 1) {
+                newArmhole -= (effectiveBackNeckDepth - 1) * 0.25;
+            }
+
+            // Display the result
+            document.getElementById("armholeValue").innerHTML = `${newArmhole.toFixed(2)} inches`;
+            document.getElementById("result").style.display = "block"; // Show the result
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Wheel - Complementary Colors</title>
+    <link rel="stylesheet" href="color-wheel.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎨 Color Wheel</h1>
+            <p>Select a color to find its complementary match!</p>
+        </header>
+
+        <div class="color-wheel-container">
+            <canvas id="colorWheel" width="400" height="400"></canvas>
+        </div>
+
+        <div class="color-info">
+            <p><strong>Selected Color:</strong> <span id="selectedColor">#FFFFFF</span></p>
+            <div class="color-box" id="selectedColorBox"></div>
+
+            <p><strong>Complementary Color:</strong> <span id="complementaryColor">#000000</span></p>
+            <div class="color-box" id="complementaryColorBox"></div>
+
+            <button class="refresh-btn" onclick="location.reload()">🔄 Reset</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Color Matching Tool</p>
+    </footer>
+
+    <script src="color-wheel.js"></script>
+</body>
+</html>

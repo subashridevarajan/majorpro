@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url('pictures/p4.jpg'); /* Ensure the correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Default styles (for larger devices like laptops or desktops) */
+.login-signup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background-color: black;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+/* Tablets (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .login-signup {
+        width: 350px; /* Adjust width for tablets */
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .user-details h1 {
+        font-size: 50px;
+    }
+
+    .user-details button {
+        margin-right: 30px;
+    }
+}
+
+/* Phones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .login-signup {
+        width: 90%; /* Take most of the width on smaller devices */
+        padding: 20px;
+    }
+
+    .login-signup h2 {
+        font-size: 22px;
+    }
+
+    .login-signup .user-box input {
+        font-size: 14px;
+    }
+
+    .btn button {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .user-details h1 {
+        font-size: 40px;
+    }
+
+    .user-details button {
+        margin-right: 20px;
+        padding: 15px 8px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+}
+
+/* Phone portrait view (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .login-signup {
+        width: 95%; /* Almost full width on very small screens */
+        padding: 15px;
+    }
+
+    .login-signup h2 {
+        font-size: 20px;
+    }
+
+    .user-box input {
+        font-size: 12px;
+    }
+
+    .btn button {
+        font-size: 16px;
+        padding: 7px 12px;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+}
+
+/* Styles for Larger Screens (Desktops/Laptops - 1024px and above) */
+@media screen and (min-width: 1024px) {
+    .login-signup {
+        width: 500px; /* Slightly larger for bigger screens */
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .user-box input {
+        font-size: 18px;
+    }
+
+    .btn button {
+        font-size: 22px;
+    }
+
+    .user-details h1 {
+        font-size: 60px;
+    }
+}
+
+/* Common styles for the login-signup form */
+.login-signup h2 {
+    margin-bottom: 35px;
+    color: #04eaf4;
+    padding: 0;
+    text-align: center;
+}
+
+.login-signup .user-box {
+    position: relative;
+}
+
+.login-signup .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+.login-signup .user-box label {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-signup .user-box input:focus ~ label, 
+.login-signup .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    padding: 5px 10px;
+    color: #03e9f4;
+    background-color: black;
+    border: 2px solid #03e9f4;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+h4 {
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h4 span {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #03e9f4;
+}
+
+.forgot-pwd h4 {
+    color: #03e9f4;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.loader {
+    display: none;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.user-details h1 {
+    text-align: center;
+    color: #090979;
+    font-size: 60px;
+}
+
+.user-details button {
+    float: right;
+    padding: 20px 10px;
+    background-color: #090979;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-right: 40px;
+    border-radius: 20px;
+}

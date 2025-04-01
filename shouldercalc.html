@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoulder Calculator</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="sholdercalcstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1><center>Shoulder Calculator</center></h1>
+        <div class="form-group">
+            <label for="shoulderWidth">Shoulder Width (inches):</label>
+            <input type="number" id="shoulderWidth" required>
+        </div>
+        <div class="form-group">
+            <label for="neckDepth">Back Neck Depth (inches):</label>
+            <input type="number" id="neckDepth" required>
+        </div>
+        <button onclick="calculateShoulder()">Calculate</button>
+
+        <div id="result" style="display: none;">
+            The Half shoulder (with seam) is: <span class="slope" id="slopeValue"></span>
+        </div>
+    </div>
+
+    <!-- JavaScript placed at the bottom of the body for best performance -->
+    <script>
+        // Function to calculate shoulder slope based on inputs
+        function calculateShoulder() {
+            // Get the input values in inches
+            const shoulderWidth = parseFloat(document.getElementById("shoulderWidth").value);
+            const neckDepth = parseFloat(document.getElementById("neckDepth").value);
+
+            // Validate the inputs
+            if (isNaN(shoulderWidth) || isNaN(neckDepth)) {
+                alert("Please enter valid numeric values.");
+                return;
+            }
+
+            // Calculate the shoulder slope (in inches)
+            const slope = ((shoulderWidth - (neckDepth / 2)) / 2) + 0.50;
+
+            // Display the result in inches
+            document.getElementById("slopeValue").innerHTML = `${slope.toFixed(2)} inches`;
+            document.getElementById("result").style.display = "block"; // Show the result
+        }
+    </script>
+
+</body>
+</html>

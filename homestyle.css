@@ -1,0 +1,117 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 60px; /* Space on either side */
+}
+
+.header {
+    background-image: url('pictures/p9.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 420px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 4rem; /* Larger font size for laptops */
+    background-color: rgba(0, 0, 0, 0.6); /* Adds a transparent background to the text */
+    padding: 10px 20px;
+}
+
+.content {
+    flex: 1;
+    background-color: #e9ecef;
+    padding: 10px;
+}
+
+.light-bg {
+    background-color: #e7ecf1; /* Light background */
+    padding: 10px; /* Padding for spacing */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 20px; /* Set font size */
+    text-align: center;
+    line-height: 1.5; /* Improved readability */
+    color: #333; /* Dark grey color for better contrast */
+    margin: 10px 0; /* Spacing between paragraphs */
+}
+
+/* Link Container Styles */
+.link-container {
+    display: flex; /* Use flexbox to align links */
+    justify-content: center; /* Center the links horizontally */
+    margin: 10px 0;
+    padding: 10px; /* Padding for the container */
+}
+
+/* Individual Link Styles */
+.link-container a {
+    background-color: #3a3f43; /* Background color for each link */
+    color: white; /* Text color for links */
+    padding: 10px 15px; /* Padding for links */
+    margin: 10px; /* Increased margin for spacing */
+    flex: 1; /* Allow links to grow and fill the container */
+    text-align: center; /* Center text within the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for links */
+    border-radius: 5px; /* Slightly rounded corners for links */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.link-container a:hover {
+    background-color: #aebecf; /* Darker blue on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Reduced padding for mobile */
+    }
+
+    .header {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .header h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+        padding: 5px 10px; /* Adjust padding for mobile */
+    }
+
+    .light-bg {
+        font-size: 16px; /* Reduced font size for paragraphs */
+        padding: 8px; /* Adjust padding for mobile */
+    }
+
+    .link-container {
+        flex-direction: column; /* Stack links vertically on mobile */
+    }
+
+    .link-container a {
+        margin: 5px 0; /* Space between stacked links */
+        padding: 10px; /* Adjust padding for mobile */
+        width: 100%; /* Make links full width */
+    }
+}

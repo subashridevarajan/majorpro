@@ -1,0 +1,95 @@
+/* Reset body margins and set height to full viewport */
+body {
+    margin: 0;
+    min-height: 100vh; /* Use min-height to allow scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the containers at the top */
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+    padding: 20px; /* Add padding to avoid content touching screen edges */
+}
+
+/* Flexbox container to hold all 6 containers in a column */
+.container-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack containers vertically */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px; /* Space between containers */
+}
+
+/* Individual container styling */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    width: 400px; /* Fixed width for each container */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    word-wrap: break-word; /* Allow long content to break onto the next line */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 50%; /* Aligns vertically with the center of the input */
+    left: -250px; /* Moves the tooltip to the left of the textbox */
+    transform: translateY(-50%); /* Centers the tooltip vertically */
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: pre-line;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px; /* Positions the arrow on the right side, pointing towards the textbox */
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black; /* Black arrow pointing to the left */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Basic button styling */
+.custom-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Displays the hand symbol when hovering */
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+.custom-button:hover {
+    background-color: #cf7bb3;
+}

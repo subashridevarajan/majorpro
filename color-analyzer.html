@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabric Color Suggestion</title>
+    <link rel="stylesheet" href="color-analyzer.css"> <!-- Link external CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Find Your Perfect Fabric Color</h1>
+        <p>Scan your face and get color suggestions based on your skin tone.</p>
+
+        <div class="video-container">
+            <video id="video" autoplay></video>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <button id="capture">Capture & Suggest Color</button>
+
+        <div id="result">
+            <p><strong>Detected Skin Tone:</strong> <span id="skin-tone"></span></p>
+            <p><strong>Detected Undertone:</strong> <span id="undertone"></span></p>
+            <p><strong>Suggested Colors:</strong></p>
+            <div id="color-suggestions"></div>
+
+            <p><strong>Colors to Avoid:</strong></p>
+            <div id="avoid-suggestions"></div>
+        </div>
+    </div>
+
+    <script src="color-analyzer.js"></script>
+</body>
+</html>

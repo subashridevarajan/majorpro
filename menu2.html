@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menustyle.css">
+    <title>Menu Page</title>
+    <style>
+        .menu-item {
+            cursor: pointer; /* Indicate that it's clickable */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>FABRIC CALCULATOR</h1>
+        </header>
+        <div class="content">
+            <div class="menu">
+                <div class="menu-item" data-link="fabblouse.html">   
+                    <h2>Blouse</h2>
+                    <p>Calculate fabric requirements for custom 3-dart blouses efficiently.</p>
+                </div>
+                <div class="menu-item" data-link="fabkurti.html">
+                    <h2>Kurti</h2>
+                    <p>Estimate the fabric needed for elegant kurti designs with ease.</p>
+                </div>
+                
+                <div class="menu-item" data-link="fabpant.html">
+                    <h2>Pant</h2>
+                    <p>Calculate the fabric needed for stylish pants, ensuring optimal use of material.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Copyright © 2024. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const link = item.getAttribute('data-link');
+                window.location.href = link; // Navigate to the specified link
+            });
+        });
+    </script>
+</body>
+</html>
